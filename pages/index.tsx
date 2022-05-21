@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <div className={classes.container}>
       <Head>
         <title>Wallet3-AX</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
       </Head>
 
     <Navbar/>

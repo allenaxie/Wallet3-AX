@@ -1,10 +1,12 @@
 import classes from './Navbar.module.scss';
+import Image from 'next/image';
 
 const Navbar = () => {
   return (
     <div className={classes.container}>
         <div className={classes.logo}>
-            LOGO
+            <Image src="/logo.png" width={60} height={50}/>
+            <span>Wallet3-AX</span>
         </div>
         <div>
 

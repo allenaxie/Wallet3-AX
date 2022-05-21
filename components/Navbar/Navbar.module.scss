@@ -6,6 +6,21 @@
     display: flex;
     justify-content: space-between;
     
+    background-color: #000;
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        margin-left: .5rem;
+        font-size: 2rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
 }
 
 .linksUser {
@@ -15,6 +30,7 @@
 
 .linksGroup {
     display: flex;
+    align-items: center;
 
     margin-right: 5rem;
 
