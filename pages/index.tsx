@@ -1,21 +1,21 @@
-import type { NextPage } from 'next'
-import Head from 'next/head';
-import classes from '../styles/Home.module.css';
-import { Navbar, Footer } from '../components';
+import classes from '../styles/index.module.scss';
+import { useRouter } from 'next/router';
 
-const Home: NextPage = () => {
+
+const index = ({setIndexPage}:any) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    setIndexPage(false);
+    router.push('/home');
+  }
+
   return (
     <div className={classes.container}>
-      <Head>
-        <title>Wallet3-AX</title>
-        <link rel="icon" href="/logo.png" />
-      </Head>
-
-    <Navbar/>
-    <Footer/>
-       
+      <div>Web 3.0 is here</div>
+      <button className={classes.ctaBtn} onClick={handleClick}>Step into the future</button>
     </div>
   )
 }
 
-export default Home
+export default index;

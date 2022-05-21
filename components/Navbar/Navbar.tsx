@@ -1,5 +1,6 @@
 import classes from './Navbar.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Avatar, Menu, Dropdown, Button } from 'antd';
 
 const Navbar = () => {
@@ -12,7 +13,7 @@ const Navbar = () => {
             </div>
             <div className={classes.linksUser}>
                 <div className={classes.linksGroup}>
-                    <div>Home</div>
+                    <Link href='/home'>Home</Link>
                     <div>About Us</div>
                     <div>Link 3</div>
                     <div>Link 4</div>
