@@ -15,15 +15,29 @@ const index = ({ setIndexPage }: any) => {
     <div className={classes.container}>
       <div className={classes.text}>Web
         <motion.div
-          whileInView={{ opacity: [0, 1], y:[-100,0] }}
-          transition={{ duration: 2 }}
+          whileInView={{ opacity: [0, 1], y: [-100, 0] }}
           whileHover={{ scale: 1.15 }}
+          transition={{ 
+            scale: { duration: .5 },
+            default:{duration: 2 }
+          }}
         >
-          3.0 
+          3.0
         </motion.div>
         is here
       </div>
-      <button className={classes.ctaBtn} onClick={handleClick}>Step into the future</button>
+      <motion.button
+        className={classes.ctaBtn}
+        onClick={handleClick}
+        whileInView= {{ opacity: [ 0, 1 ], y: [ 200,0 ]}}
+        whileHover={{ scale: 1.05}}
+        transition={{ 
+          scale: {duration: .6, repeat: Infinity, repeatType: "reverse"},
+          default: {duration: 1.2, delay: 1}
+        }}
+      >
+        Step into the future
+      </motion.button>
     </div>
   )
 }
