@@ -26,7 +26,7 @@ const index = ({ indexPage, setIndexPage }: any) => {
               whileHover={{ scale: 1.1 }}
               transition={{
                 scale: { duration: .5 },
-                default: { duration: 2 }
+                default: { duration: 2, delay:.25 }
               }}
               exit={{ opacity: 0 }}
             >
