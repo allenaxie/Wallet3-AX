@@ -26,7 +26,7 @@ const index = ({ indexPage, setIndexPage }: any) => {
               whileHover={{ scale: 1.1 }}
               transition={{
                 scale: { duration: .5 },
-                default: { duration: 2, delay:.25 }
+                default: { duration: 2, delay:.3 }
               }}
               exit={{ opacity: 0 }}
             >
@@ -38,10 +38,10 @@ const index = ({ indexPage, setIndexPage }: any) => {
             className={classes.ctaBtn}
             onClick={handleClick}
             whileInView={{ opacity: [0, 1], y: [200, 0] }}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.1 }}
             transition={{
-              scale: { duration: .6, repeat: 3, repeatType: "reverse" },
-              default: { duration: 1.2, delay: 1 }
+              scale: { duration: .3, delay: 0 },
+              default: { duration: 1.2 }
             }}
             exit={{ opacity: 0 }}
           >

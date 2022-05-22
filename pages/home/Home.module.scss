@@ -4,7 +4,7 @@
 
 .headerContainer {
     padding: 2rem;
-    height: 100vh;
+    min-height: 100vh;
     background: url('/blackBackground - 1.jpeg');
     background-size: cover;
 }
@@ -62,26 +62,28 @@
 
 .headerCol2 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 3rem;
-    position: relative;
+    align-items: center;
+    padding: 0 5rem 5rem 5rem;
 }
 
 .globeSVG {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 15rem;
+    margin: 20% 1rem 1rem 1rem;
 
-    svg {
-        font-size: 5rem;
+    & svg {
+        font-size: 8rem;
         color: #fff;
     }
 }
 
 .btcSVG, .ethSVG {
-    width: 55px;
-    height: 55px;
-    font-size: 2rem;
+    width: 75px;
+    height: 75px;
+    font-size: 3.5rem;
     border-radius: 50%;
     padding: .5rem;
 
@@ -100,6 +102,8 @@
     background-color: rgba(96,125,166);
 }
 
-.shib {
-    
+.ethShib {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
