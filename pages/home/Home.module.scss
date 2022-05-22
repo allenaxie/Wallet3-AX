@@ -1,10 +1,48 @@
 .headerContainer {
     padding: 2rem;
+    height: 100vh;
 }
 
-.headerText {
+.col1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 3rem 3rem 3rem 10rem;
+}
+
+.headerTextContainer {
+    font-size: 3rem;
+
+    // text: wallet
+    &>span>span {
+        color: var(--primary-color);
+    }
+}
+
+.headerDescription {
+    color: rgb(68, 68, 68);
+    font-size: 1.3rem;
+}
+
+.headerBtn {
+    width: 100%;
     display: flex;
     justify-content: center;
+
+    button {
+        border: none;
+        border-radius: 5px;
+
+        background: #000;
+        color: #fff;
+        padding: .5rem;
+
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        cursor: pointer;
+
+    }
 }
 
 .headerImg {
