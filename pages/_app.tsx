@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {indexPage ||
         <Navbar />
       }
-      <Component {...pageProps} setIndexPage={setIndexPage} />
+      <Component {...pageProps} indexPage={indexPage} setIndexPage={setIndexPage} />
     </>
   )
 }
