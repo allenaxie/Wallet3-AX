@@ -12,6 +12,10 @@
     padding: 3rem;
 
     color: #fff;
+
+    @media screen and (max-width: 700px) {
+        align-items: center;
+    }
 }
 
 .headerTextContainer {
@@ -23,6 +27,14 @@
     &>span>span {
         color: var(--primary-color);
     }
+
+    @media screen and (max-width: 1250px) {
+        font-size: 4rem;
+    }
+
+    @media screen and (max-width: 700px) {
+        font-size: 3rem;
+    }
 }
 
 .headerDescription {
@@ -33,6 +45,14 @@
     display: flex;
     justify-content: center;
     margin-top: 1rem;
+
+    @media screen and (max-width: 1250px) {
+        font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 700px) {
+        font-size: 1.2rem;
+    }
 }
 
 .headerBtn {
@@ -53,7 +73,10 @@
         font-size: 1.5rem;
         text-transform: uppercase;
         cursor: pointer;
+    }
 
+    @media screen and (max-width: 700px) {
+        justify-content: center;
     }
 }
 
