@@ -33,7 +33,7 @@ const Home: NextPage = ({ setIndexPage }: any) => {
         >
           <motion.div
             animate={{ opacity: [0, 1] }}
-            transition={{ opacity: { duration: .5 } }}
+            transition={{ opacity: { duration: .5, delay: .25 } }}
             className={classes.headerTextContainer}
           >
             <span>The <span>wallet </span>
@@ -45,7 +45,7 @@ const Home: NextPage = ({ setIndexPage }: any) => {
           </motion.div>
           <motion.div
             animate={{ opacity: [0, 1] }}
-            transition={{ opacity: { duration: .5 }, delay: .5 }}
+            transition={{ opacity: { duration: 1 }, delay: .5 }}
             className={classes.headerDescription}
           >
             <p> Connect your crypto wallet and start your web 3 journey today.</p>
@@ -69,21 +69,35 @@ const Home: NextPage = ({ setIndexPage }: any) => {
         >
           <motion.div
             className={classes.btcSVG}
+            animate={{ opacity:[0,1], y:[-200,0] }}
+            transition={{ duration: 1, delay: 2}}
           >
             <Tooltip placement="topLeft" title="Bitcoin" color="rgba(226,146,59)">
               <BsCurrencyBitcoin />
             </Tooltip>
           </motion.div>
-          <div className={classes.globeSVG}>
+          <motion.div 
+            className={classes.globeSVG}
+            animate={{opacity:[0,1]}}
+            transition={{ delay:1.5 }}
+          >
             <FaGlobeAmericas />
-          </div>
+          </motion.div>
           <div className={classes.ethShib}>
-            <motion.div className={classes.ethSVG}>
+            <motion.div 
+              className={classes.ethSVG}
+              animate={{ opacity:[0,1], y:[300,0] }}
+              transition={{ duration: 1, delay: 2}}
+            >
               <Tooltip placement="topLeft" title="Ethereum" color="rgba(96,125,166)">
                 <FaEthereum />
               </Tooltip>
             </motion.div>
-            <motion.div className={classes.shib}>
+            <motion.div 
+            className={classes.shib}
+            animate={{ opacity:[0,1], y:[300,0] }}
+            transition={{ duration: 1, delay: 2}}
+            >
               <Tooltip placement="topLeft" title="Shiba Inu" color="rgba(221,48,33)">
                 <Image src="/shiba-inu-svg.png" width={75} height={75} />
               </Tooltip>
