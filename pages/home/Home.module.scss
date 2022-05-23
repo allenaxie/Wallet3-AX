@@ -8,11 +8,12 @@
     padding: 5rem;
 
     // image columns
-    & > div {
+    & > div > div {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-top: 2rem;
 
         .infoWalletTitle, .infoCryptoTitle, .infoTxTitle {
             margin-top: 1rem;

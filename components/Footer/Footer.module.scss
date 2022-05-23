@@ -1,0 +1,25 @@
+.container {
+    background: linear-gradient( rgba(13, 13, 13, 0.742), rgba(53, 53, 53, 0.722)), url('/footer-background.jpeg');
+    background-size: cover;
+    object-fit: cover;
+    color: #fff;
+
+    padding: 3rem;
+}
+
+.linksGroup {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    margin-top: 2rem;
+    text-align: center;
+}
