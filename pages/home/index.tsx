@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import classes from './Home.module.scss';
-import { Row, Col } from 'antd';
+import { Row, Col, Tooltip } from 'antd';
 import { Footer } from '../../components';
 import { FaGlobeAmericas, FaEthereum } from 'react-icons/fa';
 import { BsCurrencyBitcoin } from 'react-icons/bs';
@@ -56,7 +56,7 @@ const Home: NextPage = ({ setIndexPage }: any) => {
             className={classes.headerBtn}
           >
             <motion.button
-              whileHover={{ boxShadow: "2px 4px 8px rgba(0,0,0,0.2)", y: (-2) }}
+              whileHover={{ boxShadow: "2px 2px 8px #fff", y: (-2) }}
             >
               Get started
             </motion.button>
@@ -70,17 +70,23 @@ const Home: NextPage = ({ setIndexPage }: any) => {
           <motion.div
             className={classes.btcSVG}
           >
-            <BsCurrencyBitcoin />
+            <Tooltip placement="topLeft" title="Bitcoin" color="rgba(226,146,59)">
+              <BsCurrencyBitcoin />
+            </Tooltip>
           </motion.div>
           <div className={classes.globeSVG}>
             <FaGlobeAmericas />
           </div>
           <div className={classes.ethShib}>
             <motion.div className={classes.ethSVG}>
-              <FaEthereum />
+              <Tooltip placement="topLeft" title="Ethereum" color="rgba(96,125,166)">
+                <FaEthereum />
+              </Tooltip>
             </motion.div>
             <motion.div className={classes.shib}>
-              <Image src="/shiba-inu-svg.png" width={75} height={75} />
+              <Tooltip placement="topLeft" title="Shiba Inu" color="rgba(221,48,33)">
+                <Image src="/shiba-inu-svg.png" width={75} height={75} />
+              </Tooltip>
             </motion.div>
           </div>
         </Col>
