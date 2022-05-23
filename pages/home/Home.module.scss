@@ -2,109 +2,63 @@
     padding-top: 5rem;
 }
 
-.headerContainer {
-    padding: 2rem;
-    min-height: 100vh;
-    background: url('/blackBackground - 1.jpeg');
-    background-size: cover;
+.infoSection {
+    background: rgba(31,31,31);
+    color: #fff;
+    padding: 5rem;
+
+    // image columns
+    & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .infoWalletTitle, .infoCryptoTitle, .infoTxTitle {
+            margin-top: 1rem;
+            font-size: 1.6rem;
+        }
+
+        .infoWalletTitle {
+            span {
+                color: rgb(255, 92, 92);
+            }
+        }
+
+        .infoCryptoTitle {
+            span {
+                color: rgb(254, 91, 254);
+            }
+        }
+
+        .infoTxTitle {
+            span {
+                color: rgb(106, 106, 253);
+            }
+        }
+    }
 }
 
-.headerCol1 {
+.infoPrimaryText {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 3rem;
-
-    color: #fff;
-}
-
-.headerTextContainer {
-    font-size: 5.5rem;
-    display: flex;
-    justify-content: center;
-
-    // text: wallet
-    &>span>span {
-        color: var(--primary-color);
-    }
-}
-
-.headerDescription {
-    color: #fff;
-    font-size: 1.7rem;
-    font-weight:500;
-
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.headerBtn {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 1rem;
-
-    button {
-        border: none;
-        border-radius: 5px;
-
-        background: #000;
-        color: #fff;
-        box-shadow: 0 0 8px #fff;
-        padding: .5rem;
-
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        cursor: pointer;
-
-    }
-}
-
-.headerCol2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 5rem 5rem 5rem;
-}
-
-.globeSVG {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20% 1rem 1rem 1rem;
-
-    & svg {
-        font-size: 8rem;
-        color: #fff;
-    }
-}
-
-.btcSVG, .ethSVG {
-    width: 75px;
-    height: 75px;
-    font-size: 3.5rem;
-    border-radius: 50%;
-    padding: .5rem;
-
-    display: flex;
     justify-content: center;
     align-items: center;
 
-}
+    width:100%;
+    margin-top: 2rem;
 
-.btcSVG {
-    color: #fff;
-    background-color: rgba(226,146,59);
-}
+    div {
+        font-size: 2rem;
+        // text-align: center;
 
-.ethSVG {
-    color:rgb(31, 31, 31);
-    background-color: rgba(96,125,166);
-}
+        span {
+            color: var(--primary-color);
+        }
 
-.ethShib {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+        p {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+    }
 }
