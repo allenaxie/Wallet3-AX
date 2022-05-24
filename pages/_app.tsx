@@ -12,7 +12,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Wallet3-AX</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap" rel="stylesheet" />
       </Head>
       {indexPage ||
         <Navbar />
