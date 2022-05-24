@@ -11,7 +11,7 @@ const SignIn = ({ providers, session, setIndexPage }: any) => {
     return (
         <div className={classes.container}>
             <h1>Sign In Page</h1>
-            {/* <Login/> */}
+            <Login/>
             {Object.values(providers).map((provider) => (
                 <div key={provider?.name}>
                     <button onClick={() => signIn(provider.id, {

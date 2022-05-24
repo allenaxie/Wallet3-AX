@@ -17,7 +17,7 @@ const MyApp = ({
 
   return (
     <>
-      {/* <SessionProvider session={session}> */}
+      <SessionProvider session={session}>
         <Head>
           <title>Wallet3-AX</title>
         </Head>
@@ -25,7 +25,7 @@ const MyApp = ({
           <Navbar />
         }
         <Component {...pageProps} indexPage={indexPage} setIndexPage={setIndexPage} />
-      {/* </SessionProvider> */}
+      </SessionProvider>
     </>
 
   )
