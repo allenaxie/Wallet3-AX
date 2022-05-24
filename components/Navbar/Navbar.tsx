@@ -15,8 +15,8 @@ const Navbar = () => {
                 <div className={classes.linksGroup}>
                     <Link href='/home'>Home</Link>
                     <Link href='/home'>About Us</Link>
-                    <Link href='/auth'>Sign Up</Link>
-                    <Link href='/auth'>Log In</Link>
+                    <Link href='/auth/signin'>Sign Up</Link>
+                    <Link href='/auth/signin'>Log In</Link>
                 </div>
                 <div className={classes.userAvatar}>
                     <Dropdown
