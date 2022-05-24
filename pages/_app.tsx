@@ -6,7 +6,8 @@ import { useState } from 'react';
 import { Navbar, Footer } from '../components';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [indexPage, setIndexPage] = useState(true)
+  const [indexPage, setIndexPage] = useState(true);
+  const [currentUser, setCurrentUser] = useState('');
 
   return (
     <>
