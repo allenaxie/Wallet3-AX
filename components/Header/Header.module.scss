@@ -13,13 +13,13 @@
 
     color: #fff;
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 991px) {
         align-items: center;
     }
 }
 
 .headerTextContainer {
-    font-size: 5.5rem;
+    font-size: 5.2rem;
     display: flex;
     justify-content: center;
 
@@ -39,7 +39,7 @@
 
 .headerDescription {
     color: #fff;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight:500;
 
     display: flex;
@@ -75,7 +75,7 @@
         cursor: pointer;
     }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 991px) {
         justify-content: center;
     }
 }
@@ -85,6 +85,10 @@
     flex-direction: column;
     align-items: center;
     padding: 3rem 5rem 5rem 5rem;
+
+    @media screen and (max-width:750px) {
+        padding: 2rem;
+    }
 }
 
 .globeSVG {
@@ -96,6 +100,10 @@
     & svg {
         font-size: 8rem;
         color: #fff;
+    }
+
+    @media screen and (max-width:991px) {
+        margin: 15% 1rem 1rem 1rem;
     }
 }
 
@@ -126,4 +134,8 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+
+    @media screen and (max-width:991px) {
+        justify-content: space-around;
+    }
 }
