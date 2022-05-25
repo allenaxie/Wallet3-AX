@@ -1,9 +1,18 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import classes from './Login.module.scss';
 import Image from 'next/image';
+import { Row, Col} from 'antd';
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from 'react-icons/fa';
 
 const Login = ({ providers, session }: any) => {
   // const { data: session } = useSession()
+
+  const providerIcons = [
+    <FcGoogle/>,
+    <FaGithub/>,
+  ]
+
   if (session) {
     console.log('login-session', session)
     return (
@@ -19,16 +28,33 @@ const Login = ({ providers, session }: any) => {
   } else {
     return (
       <>
-        Not signed in <br />
-        {Object.values(providers).map((provider)  => (
-          <div key={((provider as any).name)}>
-            <button onClick={() => signIn((provider as any).id, {
-              callbackUrl: `${window.location.origin}/home`,
-            })}>
-              Sign in with {(provider as any).name}
-            </button>
-          </div>
-        ))}
+        <Row className={classes.container}>
+          {/* <div className={classes.logo}>
+            <Image src="/logo.png" width={100} height={100}/>
+          </div> */}
+          <Col
+          xs={{ span: 24 }}
+          md={{ span: 16, offset:4 }}
+          className={classes.col1}
+          >
+            <div className={classes.title}>
+              <h1>Login</h1>
+            </div>
+            Login using your favorite applications!
+            {Object.values(providers).map((provider, index)  => (
+              <div key={((provider as any).name)} className={classes.providerBtn}
+              >
+                <button 
+                onClick={() => signIn((provider as any).id, {
+                  callbackUrl: `${window.location.origin}/home`,
+                })}>
+                  Sign In with 
+                  {providerIcons[index]}
+                </button>
+              </div>
+            ))}
+          </Col>
+        </Row>
 
       </>
     )

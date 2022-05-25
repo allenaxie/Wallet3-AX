@@ -26,7 +26,6 @@ const Navbar = () => {
                             <>
                                 <Link href='/home'>Home</Link>
                                 <Link href='/home'>About Us</Link>
-                                <Link href='/auth/signin'>Sign Up</Link>
                                 <Link href='/auth/signin'>Log In</Link>
                             </>
 
