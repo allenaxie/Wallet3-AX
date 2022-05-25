@@ -81,6 +81,11 @@
 }
 
 .userMenuItem {
+    &:hover {
+        color: rgba(0, 0, 0, 0.85) !important;
+        background-color: rgba(238, 238, 238, 0.699);
+    }
+
     svg {
         margin-right: .5rem;
     }
