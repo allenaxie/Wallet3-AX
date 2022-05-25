@@ -1,11 +1,15 @@
 import classes from './Header.module.scss';
 import Image from 'next/image';
 import { motion } from "framer-motion";
+import { useRouter } from 'next/router';
 import { Row, Col, Tooltip } from 'antd';
 import { FaGlobeAmericas, FaEthereum } from 'react-icons/fa';
 import { BsCurrencyBitcoin } from 'react-icons/bs';
 
 const Header = () => {
+
+  const router = useRouter();
+
   return (
     <Row className={classes.headerContainer}>
         <Col
@@ -39,6 +43,7 @@ const Header = () => {
           >
             <motion.button
               whileHover={{ boxShadow: "2px 2px 8px #fff", y: (-2) }}
+              onClick={() => router.push('/auth/signin')}
             >
               Get started
             </motion.button>

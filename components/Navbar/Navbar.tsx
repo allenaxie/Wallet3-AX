@@ -68,7 +68,7 @@ const Navbar = () => {
                                     <>
                                     <Menu.Item
                                     key="signIn"
-                                    onClick={() => router.push(`${window.location.origin}/auth/signin`)}
+                                    onClick={() => router.push('/auth/signin')}
                                     >
                                         Log In
                                     </Menu.Item>
