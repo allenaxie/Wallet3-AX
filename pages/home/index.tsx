@@ -10,6 +10,7 @@ import { Footer, Header } from '../../components';
 
 const Home: NextPage = ({ setIndexPage }: any) => {
 
+
   useEffect(() => {
     // show navbar
     setIndexPage(false);
