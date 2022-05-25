@@ -1,9 +1,13 @@
 import classes from './Navbar.module.scss';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSession, signOut } from 'next-auth/react';
 import { Avatar, Menu, Dropdown, Button } from 'antd';
-import { useRouter } from 'next/router';
+import { AiOutlineUser } from 'react-icons/ai';
+import { BsWallet2 } from 'react-icons/bs';
+import { IoSettingsOutline } from 'react-icons/io5';
+import { HiOutlineLogout } from 'react-icons/hi';
 
 const Navbar = () => {
     const { data: session } = useSession();
@@ -24,7 +28,6 @@ const Navbar = () => {
                             <>
                                 <Link href='/home'>Home</Link>
                                 <Link href='/home'>About Us</Link>
-                                welcome {session?.user?.name}
                             </>
                             :
                             <>
@@ -40,41 +43,58 @@ const Navbar = () => {
                 <div className={classes.userAvatar}>
                     <Dropdown
                         overlay={
-                            <Menu className={classes.menu}>
-                            {session ?
-                                
-                                <>
-                                <Menu.Item key="profile">
-                                    Profile
-                                </Menu.Item>
-                                <Menu.Item key="wallet">
-                                    Wallet
-                                </Menu.Item>
-                                <Menu.Item key="settings">
-                                    Settings
-                                </Menu.Item>
-                                
-                                    <Menu.Item
-                                        key="signOut"
-                                        onClick={() => signOut({
-                                            callbackUrl: `${window.location.origin}/auth/signin`
-                                        })}
+                            <>
+                                <Menu className={classes.menu}>
+                                    {session ?
 
-                                    >
-                                        Sign Out
-                                    </Menu.Item>
-                                    </>
-                                    :
-                                    <>
-                                    <Menu.Item
-                                    key="signIn"
-                                    onClick={() => router.push('/auth/signin')}
-                                    >
-                                        Log In
-                                    </Menu.Item>
-                                    </>
-                                }
+                                        <>
+                                            <div className={classes.welcome}>
+                                                <span >Welcome <span> {session?.user?.name} </span> !</span>
+                                            </div>
+                                            <Menu.Item key="profile" className={classes.userMenuItem}>
+                                                <AiOutlineUser />
+                                                <span>
+                                                    Profile
+                                                </span>
+                                            </Menu.Item>
+                                            <Menu.Item key="wallet" className={classes.userMenuItem}>
+                                                <BsWallet2/>
+                                                <span>
+                                                    Wallet
+                                                </span>
+                                            </Menu.Item>
+                                            <Menu.Item key="settings" className={classes.userMenuItem}>
+                                                <IoSettingsOutline/>
+                                                <span>
+                                                    Settings
+                                                </span>
+                                            </Menu.Item>
+
+                                            <Menu.Item
+                                                key="signOut"
+                                                onClick={() => signOut({
+                                                    callbackUrl: `${window.location.origin}/auth/signin`
+                                                })}
+                                                className={classes.userMenuItem}
+                                            >
+                                                <HiOutlineLogout/>
+                                                <span>
+                                                    Sign Out
+                                                </span>
+                                            </Menu.Item>
+                                        </>
+                                        :
+                                        <>
+                                            <Menu.Item
+                                                key="signIn"
+                                                onClick={() => router.push('/auth/signin')}
+                                            >
+                                                Log In
+                                            </Menu.Item>
+                                        </>
+                                    }
                                 </Menu>
+                            </>
                         }
                         placement="bottomRight"
                         arrow={true}

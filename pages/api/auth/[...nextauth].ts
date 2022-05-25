@@ -41,5 +41,5 @@ export default NextAuth({
       }
     }
   },
-  adapter: MongoDBAdapter(clientPromise as any),
+  // adapter: MongoDBAdapter(clientPromise as any),
 })

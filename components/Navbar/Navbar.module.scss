@@ -70,4 +70,18 @@
     }
 }
 
+.welcome {
+    padding: 1rem;
+    margin-top: .3rem;
 
+    // user's name
+    & > span > span {
+        font-weight: 600;
+    }
+}
+
+.userMenuItem {
+    svg {
+        margin-right: .5rem;
+    }
+}
