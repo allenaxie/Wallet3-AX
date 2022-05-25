@@ -11,8 +11,8 @@ const SignIn = ({ providers, session, setIndexPage }: any) => {
     return (
         <div className={classes.container}>
             <h1>Sign In Page</h1>
-            <Login/>
-            {Object.values(providers).map((provider) => (
+            <Login providers={providers} session={session}/>
+            {/* {Object.values(providers).map((provider) => (
                 <div key={provider?.name}>
                     <button onClick={() => signIn(provider.id, {
                         callbackUrl: `${window.location.origin}/home`,
@@ -20,19 +20,18 @@ const SignIn = ({ providers, session, setIndexPage }: any) => {
                         Sign in with {provider.name}
                     </button>
                 </div>
-            ))}
+            ))} */}
         </div>
     );
 }
 
 export default SignIn;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context:any) {
     return {
         props: {
             providers: await getProviders(),
             session: await getSession(context),
-
         }
     };
 }

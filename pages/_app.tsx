@@ -13,7 +13,6 @@ const MyApp = ({
 }: any) => {
   const [indexPage, setIndexPage] = useState(true);
   const [currentUser, setCurrentUser] = useState('');
-  console.log('session',session);
 
   return (
     <>
