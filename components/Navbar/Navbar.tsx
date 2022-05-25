@@ -3,10 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useSession, signOut } from 'next-auth/react';
 import { Avatar, Menu, Dropdown, Button } from 'antd';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
-    const { data: session } = useSession()
+    const { data: session } = useSession();
     console.log('navbar-session', session)
+
+    const router = useRouter();
+
     return (
         <div className={classes.container}>
             <div className={classes.logo}>
@@ -37,6 +41,9 @@ const Navbar = () => {
                     <Dropdown
                         overlay={
                             <Menu className={classes.menu}>
+                            {session ?
+                                
+                                <>
                                 <Menu.Item key="profile">
                                     Profile
                                 </Menu.Item>
@@ -46,7 +53,7 @@ const Navbar = () => {
                                 <Menu.Item key="settings">
                                     Settings
                                 </Menu.Item>
-                                {session &&
+                                
                                     <Menu.Item
                                         key="signOut"
                                         onClick={() => signOut({
@@ -56,8 +63,18 @@ const Navbar = () => {
                                     >
                                         Sign Out
                                     </Menu.Item>
+                                    </>
+                                    :
+                                    <>
+                                    <Menu.Item
+                                    key="signIn"
+                                    onClick={() => router.push(`${window.location.origin}/auth/signin`)}
+                                    >
+                                        Log In
+                                    </Menu.Item>
+                                    </>
                                 }
-                            </Menu>
+                                </Menu>
                         }
                         placement="bottomRight"
                         arrow={true}

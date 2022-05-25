@@ -34,7 +34,7 @@ const Login = ({ providers, session }: any) => {
           </div> */}
           <Col
           xs={{ span: 24 }}
-          md={{ span: 16, offset:4 }}
+          lg={{ span: 16, offset:4 }}
           className={classes.col1}
           >
             <div className={classes.title}>
