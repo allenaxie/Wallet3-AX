@@ -1,7 +1,8 @@
 import classes from "./index.module.scss";
 import { useEffect } from 'react';
+import { Profile } from "../../components";
 
-const Profile = ({ providers, session, setIndexPage }: any) => {
+const ProfilePage = ({ providers, session, setIndexPage }: any) => {
 
     useEffect(() => {
         // show navbar
@@ -12,9 +13,9 @@ const Profile = ({ providers, session, setIndexPage }: any) => {
 
     return (
         <div className={classes.container}>
-            Profileeeee
+            <Profile/>
         </div>
     )
 }
 
-export default Profile;
+export default ProfilePage;
