@@ -53,9 +53,9 @@ const Navbar = () => {
                                             </div>
                                             <Menu.Item key="profile" className={classes.userMenuItem}>
                                                 <AiOutlineUser />
-                                                <span>
+                                                <Link href="/profile">
                                                     Profile
-                                                </span>
+                                                </Link>
                                             </Menu.Item>
                                             <Menu.Item key="wallet" className={classes.userMenuItem}>
                                                 <BsWallet2/>
